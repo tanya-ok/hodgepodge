@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base Apparel Coming Soon</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+  <section class="left">
+    <img src="images/logo.svg" alt="Base Apparel logo" class="logo" />
+
+    <div class="left-content">
+      <h1><span>We're</span> coming soon</h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form id="email-form">
+        <input type="email" id="email" placeholder="Email Address" required />
+        <button type="submit"><img src="images/icon-arrow.svg" alt="Submit" /></button>
+        <div class="error-message" id="error-msg">Please provide a valid email</div>
+      </form>
+    </div>
+  </section>
+  <section class="right">
+    <img src="images/hero-desktop.jpg" alt="Model" />
+  </section>
+</main>
+
+<footer>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name</a>.
+  </p>
+</footer>
+
+<script>
+  document.getElementById('email-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('email');
+    var error = document.getElementById('error-msg');
+    var pattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    if (!pattern.test(email.value)) {
+      email.classList.add('error');
+      error.style.display = 'block';
+    } else {
+      email.classList.remove('error');
+      error.style.display = 'none';
+      alert('Thank you!');
+    }
+  });
+</script>
+</body>
+</html>

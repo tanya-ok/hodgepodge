@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  color: hsl(0, 36%, 70%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  color: hsl(0, 6%, 24%);
+  margin-bottom: 1.5rem;
+}
+
+h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+p {
+  max-width: 400px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+form {
+  position: relative;
+  max-width: 400px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 30px;
+  border: 1px solid hsl(0, 36%, 70%);
+  font-size: 1rem;
+}
+
+input.error {
+  border-color: red;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: hsl(0, 93%, 68%);
+  border: none;
+  border-radius: 30px;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button img {
+  width: 12px;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: hsl(0, 36%, 70%);
+}
+
+footer a {
+  color: hsl(0, 36%, 70%);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .right {
+    width: 100%;
+    height: 300px;
+    background: url("images/hero-mobile.jpg") no-repeat center center/cover;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  .left {
+    padding: 1rem;
+  }
+}
